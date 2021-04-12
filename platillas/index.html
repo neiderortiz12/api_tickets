@@ -1,0 +1,53 @@
+
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api tickets</title>
+</head>
+<body>
+    <h1>Api Tickets Golang</h1>
+    <div>
+        <h3>Rutas</h3>
+        
+            <p>/tickets  devuelve un arreglo con todos los tickets</p>
+            <p>método = 'GET'</p>
+            <br>
+
+            <p>/tickets/id devuelve un json con el registro del id</p>
+            <p>método = 'GET'</p>
+            <br>
+
+            <p>/tickets/edit/id recibe un json como el siguiente y el id</p>
+            <p>método = 'SET'</p>
+            <p>{</p>
+            <p>&nbsp    "Name":"user1"</p>
+            <p>&nbsp    "State":"abierto" // abierto o cerrado</p>
+            <p>}</p>
+            <p>este json contiene los dos cambios que se pueden realizar ya sea el usuario o el estado</p>
+            <p>la fecha de actualización la toma del sistema</p>
+
+            <br>
+            <p>/tickets/delete/id elimina el registro identificado con el id que se envio</p>
+            <p>método = 'DELETE'</p>
+
+            <br>
+            <p>/tickets/create recibe un json de la siguiente manera para realizar un registro nuevo</p>
+            <p>la fecha de creación la toma del sistema</p>
+            <p>método = 'POST'</p>
+
+            <p>{</p>
+            <p>&nbsp    "Name":"user1"</p>
+            <p>&nbsp    "State":"abierto" // abierto o cerrado</p>
+            <p>}</p>
+
+
+       
+        
+    </div>
+</body>
+</html>
+{{end}}
